@@ -1,11 +1,11 @@
 import React from 'react'
 import { MdOutlineRealEstateAgent } from "react-icons/md";
 import { FaRegUser } from "react-icons/fa";
-import Link from 'next/link';
+import { MdOutlineHomeWork } from "react-icons/md";import Link from 'next/link';
 
 function Header() {
     return (
-        <header className='flex justify-between font-Dana items-center mb-5 p-4 mx-auto w-full bg-violet-600'>
+        <header className='flex justify-between font-Dana items-center px-5 p-4 mx-auto w-full bg-violet-600'>
             <div className='flex p-1 items-center text-white'>
                 <ul className='flex justify-around text-sm'>
                     <li className='p-1 mx-1'>
@@ -16,7 +16,8 @@ function Header() {
                     </li>
                 </ul>
             </div>
-            <div className=' text-white text-2xl'>
+            <p className='flex gap-2  font-DanaDemiBold text-white '><MdOutlineHomeWork  className='text-4xl font-bold' /></p>
+            <div className=' text-white text-2xl hover:text-indigo-200 transition-all ease-in-out'>
                 <Link href="/signin" className=' '> <FaRegUser /> </Link>
             </div>
         </header>
