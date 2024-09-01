@@ -1,5 +1,4 @@
 import React from 'react'
-import { MdOutlineRealEstateAgent } from "react-icons/md";
 import { FaRegUser } from "react-icons/fa";
 import { MdOutlineHomeWork } from "react-icons/md";import Link from 'next/link';
 
@@ -18,7 +17,7 @@ function Header() {
             </div>
             <p className='flex gap-2  font-DanaDemiBold text-white '><MdOutlineHomeWork  className='text-4xl font-bold' /></p>
             <div className=' text-white text-2xl hover:text-indigo-200 transition-all ease-in-out'>
-                <Link href="/signin" className=' '> <FaRegUser /> </Link>
+                <Link href="/signup" className=' '> <FaRegUser /> </Link>
             </div>
         </header>
     )
