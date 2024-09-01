@@ -98,9 +98,9 @@ function Footer() {
           </p>
         </div>
        
-        <div className="">
+        <div className="flex flex-col items-center">
           <h6
-            className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+            className="mb-4  flex justify-center font-semibold uppercase md:justify-start">
 تعرفه ها
           </h6>
           <p className="mb-4">
