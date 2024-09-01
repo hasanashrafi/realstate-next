@@ -5,7 +5,7 @@ import connectDB from "@/utils/connectDB";
 import { verifyPassword } from "@/utils/auth";
 import NextAuth from "next-auth";
 
-const authOptions = {
+export const authOptions = {
     session: { strategy: "jwt" },
     providers: [CredentialsProviders({
 
