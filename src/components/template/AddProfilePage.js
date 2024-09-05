@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react'
 import TextInput from '../module/TextInput'
+import RadioList from '../module/RadioList'
 
 function AddProfilePage() {
     const [profileData, setProfileData] = useState({
@@ -61,6 +62,8 @@ console.log(profileData)
                     profileData={profileData}
                     setProfileData={setProfileData}
                 />
+
+                <RadioList profileData={profileData} setProfileData={setProfileData}/>
 
                 <button
                     onClick={submitHandler}
