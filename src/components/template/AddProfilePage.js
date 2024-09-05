@@ -22,7 +22,7 @@ console.log(profileData)
     }
 
     return (
-        <div className='font-DanaMedium min-h-screen p-5 border rounded-md mb-10 mx-10'>
+        <div className='font-DanaMedium min-h-screen p-2 mx-1 border rounded-md mb-10  w-fit'>
             <p className='font-DanaDemiBold text-violet-700 text-xl mb-5'>ثبت آگهی</p>
             <div className='pr-5 my-5 flex flex-col gap-y-6'>
                 <TextInput
