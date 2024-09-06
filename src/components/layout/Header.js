@@ -23,7 +23,7 @@ return (
             <div className='relative sm:hidden'>
                 <button
                     onClick={toggleDropdown}
-                    className=' p-2 bg-blue-500 rounded '
+                    className=' p-2 rounded text-xl '
                 >
                     <IoMenu />
                 </button>
