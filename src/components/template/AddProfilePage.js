@@ -24,7 +24,7 @@ console.log(profileData)
     return (
         <div className='font-DanaMedium min-h-screen p-2  border rounded-md mb-10  w-full'>
             <p className='font-DanaDemiBold text-violet-700 text-xl mb-5  px-3'>ثبت آگهی</p>
-            <div className='pr-2 my-5 flex flex-col gap-y-6'>
+            <div className='w-full pr-2 my-5 flex flex-col gap-y-6'>
                 <TextInput
                     name="title"
                     title="عنوان"
@@ -67,7 +67,7 @@ console.log(profileData)
 
                 <button
                     onClick={submitHandler}
-                    className=' bg-blue-600 hover:bg-blue-800 text-white w-80  p-2 rounded-md mt-5'>ثبت آگهی</button>
+                    className=' bg-blue-600 hover:bg-blue-800 text-white md:w-[50%] mx-auto w-[95%]  p-2 rounded-md mt-5'>ثبت آگهی</button>
             </div>
         </div>
     )
