@@ -10,18 +10,19 @@ function Header() {
     const { data } = useSession()
     console.log(data)
     return (
-        <header className='flex justify-between font-Dana items-center px-5 p-4 mx-auto w-full bg-violet-600'>
-            <div className='flex p-1 items-center text-white'>
-                <ul className='flex justify-around text-sm'>
-                    <li className='p-1 mx-1'>
+        <header className='flex justify-between font-Dana items-center px-5 p-2 mx-auto w-full bg-violet-600'>
+            <div className='flex  items-center text-white'>
+                <ul className='flex  justify-start text-sm'>
+                    <li className='p-1'>
                         <Link href="/">صفحه اصلی</Link>
                     </li>
-                    <li className='p-1 mx-1'>
+                    <li className='p-1'>
                         <Link href="/buy-residential">آگهی ها </Link>
                     </li>
                 </ul>
             </div>
-            <p className='flex gap-2  font-DanaDemiBold text-white '><MdOutlineHomeWork className='text-4xl font-bold' /></p>
+           
+            <MdOutlineHomeWork className='text-3xl text-white font-bold' />
             {
                 data ? (
                     <div className=' text-white text-2xl hover:text-indigo-200 transition-all ease-in-out'>
