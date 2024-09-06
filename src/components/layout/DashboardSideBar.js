@@ -10,12 +10,12 @@ async function DashboardSideBar({ children }) {
     console.log(session)
 
     return (
-        <div className='flex flex-col md:flex-row justify-center items-center gap-y-5 mx-5 mt-10  px-2 '>
+        <div className='w-[95%]  p-2 mx-auto flex flex-col md:flex-row md:items-start md:gap-x-3 justify-center items-center gap-y-5  mt-10  px-2 '>
 
             {/* sidebar */}
-            <div className='font-DanaDemiBold flex md:flex-col justify-between mx-auto items-center md:w-[200px] w-full bg-white h-fit px-2 py-2 rounded-lg shadow-blue-300 shadow-light text-sm'>
-                <CgProfile className='hidden md:visible text-5xl text-gray-600' />
-                <p className='p-1 my-2 text-gray-600 font-semibold border-b-2 border-b-gray-500'>
+            <div className=' font-DanaDemiBold flex md:flex-col justify-between mx-auto items-center md:w-[200px] w-full  h-fit px-2 py-2 rounded-lg shadow-blue-300 shadow-light text-sm'>
+                <CgProfile className='hidden md:block text-5xl text-gray-600' />
+                <p className='hidden md:block p-1 my-2 text-gray-600 font-semibold border-b-2 border-b-gray-500'>
                     {session?.user.email}
                 </p>
 
@@ -34,10 +34,11 @@ async function DashboardSideBar({ children }) {
                     className='text-blue-600 my-2 hover:text-blue-700 transition-all ease-in-out'>
                     ثبت آگهی
                 </Link>
-                <LogOutButton/>
+                <div> <LogOutButton/></div>
+               
             </div>
             {/* main */}
-            <div className=' w-fit '>
+            <div className='w-[95%] mx-auto'>
                 {children}
             </div>
         </div>
