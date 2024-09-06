@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import TextInput from '../module/TextInput'
 import RadioList from '../module/RadioList'
+import TextList from '../module/TextList'
 
 function AddProfilePage() {
     const [profileData, setProfileData] = useState({
@@ -13,17 +14,17 @@ function AddProfilePage() {
         realEstate: "",
         constructionDate: new Date(),
         category: "",
-        roles: [],
+        rules: [],
         amenities: [],
     })
 
-    const submitHandler =async () => {
-console.log(profileData)
+    const submitHandler = async () => {
+        console.log(profileData)
     }
-
+    console.log(profileData)
     return (
         <div className='font-DanaMedium min-h-screen p-2  border rounded-md mb-10  w-full'>
-            <p className='font-DanaDemiBold text-violet-700 text-xl mb-5  px-3'>ثبت آگهی</p>
+            <p className='mt-3 font-DanaDemiBold text-violet-700 text-xl mb-5  px-3'>ثبت آگهی</p>
             <div className='w-full pr-2 my-5 flex flex-col gap-y-6'>
                 <TextInput
                     name="title"
@@ -63,11 +64,24 @@ console.log(profileData)
                     setProfileData={setProfileData}
                 />
 
-                <RadioList profileData={profileData} setProfileData={setProfileData}/>
-
+                <RadioList profileData={profileData} setProfileData={setProfileData} />
+                <TextList
+                    title="امکانات رفاهی"
+                    profileData={profileData}
+                    setProfileData={setProfileData}
+                    type="amenities"
+                />
+                <TextList
+                    title="قوانین "
+                    profileData={profileData}
+                    setProfileData={setProfileData}
+                    type="rules"
+                />
                 <button
                     onClick={submitHandler}
-                    className=' bg-blue-600 hover:bg-blue-800 text-white md:w-[50%] mx-auto w-[95%]  p-2 rounded-md mt-5'>ثبت آگهی</button>
+                    className=' bg-blue-600 hover:bg-blue-800 text-white md:w-[50%] mx-auto w-[95%]  p-2 rounded-md mt-5'>
+                    ثبت آگهی
+                </button>
             </div>
         </div>
     )
