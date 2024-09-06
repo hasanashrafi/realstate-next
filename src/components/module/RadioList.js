@@ -12,7 +12,7 @@ function RadioList({ profileData, setProfileData }) {
             <p>دسته بندی</p>
             <div className='flex flex-wrap items-center gap-3 justify-start my-3'>
 
-                <div className='flex  items-center bg-blue-100 p-1 px-3 gap-x-2 rounded w-fit'>
+                <div className=' flex  items-center bg-blue-100 p-1 px-3 gap-x-2 rounded w-24 justify-center'>
                     <input
                         type="radio"
                         className=''
@@ -25,7 +25,7 @@ function RadioList({ profileData, setProfileData }) {
                     <label htmlFor='villa'>ویلا</label>
                 </div>
 
-                <div className='flex items-center bg-blue-100 p-1 px-3 gap-x-2 rounded w-fit'>
+                <div className=' flex items-center bg-blue-100 p-1 px-3 gap-x-2 rounded w-24 justify-center'>
                     <input
                         type="radio"
                         className=''
@@ -38,7 +38,7 @@ function RadioList({ profileData, setProfileData }) {
                     <label htmlFor='apartment'>آپارتمان</label>
                 </div>
 
-                <div className='flex items-center bg-blue-100 p-1 px-3 gap-x-2 rounded w-fit'>
+                <div className=' flex items-center bg-blue-100 p-1 px-3 gap-x-2 rounded w-24 justify-center'>
                     <input
                         type="radio"
                         className=''
@@ -51,7 +51,7 @@ function RadioList({ profileData, setProfileData }) {
                     <label htmlFor='store'>مغازه</label>
                 </div>
 
-                <div className='flex items-center bg-blue-100 p-1 px-3 gap-x-2 rounded w-fit'>
+                <div className=' flex items-center bg-blue-100 p-1 px-3 gap-x-2 rounded w-24 justify-center'>
                     <input
                         type="radio"
                         className=''
@@ -64,7 +64,6 @@ function RadioList({ profileData, setProfileData }) {
                     <label htmlFor='office'>دفتر</label>
                 </div>
 
-                
             </div>
         </div>
     )
