@@ -8,11 +8,11 @@ function RadioList({ profileData, setProfileData }) {
         setProfileData({ ...profileData, [name]: value })
     }
     return (
-        <div className='my-2 w-96 '>
+        <div className='my-2 w-fit '>
             <p>دسته بندی</p>
-            <div className='flex items-center gap-3 justify-start my-3'>
+            <div className='flex flex-wrap items-center gap-3 justify-start my-3'>
 
-                <div className='flex items-center bg-blue-100 p-1 px-3 gap-x-2 rounded w-fit'>
+                <div className='flex  items-center bg-blue-100 p-1 px-3 gap-x-2 rounded w-fit'>
                     <input
                         type="radio"
                         className=''
