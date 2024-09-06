@@ -22,9 +22,9 @@ console.log(profileData)
     }
 
     return (
-        <div className='font-DanaMedium min-h-screen p-2 mx-1 border rounded-md mb-10  w-fit'>
-            <p className='font-DanaDemiBold text-violet-700 text-xl mb-5'>ثبت آگهی</p>
-            <div className='pr-5 my-5 flex flex-col gap-y-6'>
+        <div className='font-DanaMedium min-h-screen p-2  border rounded-md mb-10  w-full'>
+            <p className='font-DanaDemiBold text-violet-700 text-xl mb-5  px-3'>ثبت آگهی</p>
+            <div className='pr-2 my-5 flex flex-col gap-y-6'>
                 <TextInput
                     name="title"
                     title="عنوان"
