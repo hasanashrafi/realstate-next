@@ -26,7 +26,7 @@ function TextInput({
                             value={profileData[name]}
                             type='text'
                             placeholder='...'
-                            className='w-80 h-36 p-2 my-1 text-justify rounded-md border focus:border-blue-600 outline-none'
+                            className='w-72 h-36 p-2 my-1 text-justify rounded-md border focus:border-blue-600 outline-none'
                         />
 
                     ) : (
@@ -36,7 +36,7 @@ function TextInput({
                             value={profileData[name]}
                             type='text'
                             placeholder='عنوان را وارد کنید  ...'
-                            className='p-2 w-80 my-1 focus:border focus:border-blue-600 rounded-md border outline-none' />
+                            className='p-2 w-72 my-1 focus:border focus:border-blue-600 rounded-md border outline-none' />
                     )
             }
 
