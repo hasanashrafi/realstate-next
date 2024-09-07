@@ -1,5 +1,5 @@
 import React from 'react'
-import { p2e } from '@/utils/replaceNumbers'
+import { p2e, sp } from '@/utils/replaceNumbers'
 
 function TextInput({
     title,
