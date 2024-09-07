@@ -1,7 +1,8 @@
-import { authOptions } from '@/app/api/auth/[...nextauth]/route'
-import { getServerSession } from 'next-auth'
-import SigninPage from '@/components/template/SigninPage'
 import { redirect } from 'next/navigation'
+import { getServerSession } from 'next-auth'
+
+import { authOptions } from '@/app/api/auth/[...nextauth]/route'
+import SigninPage from '@/components/template/SigninPage'
 
 
 
