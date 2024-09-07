@@ -11,7 +11,6 @@ async function DashboardSideBar({ children }) {
 
     return (
         <div className='p-2  md:flex-row md:items-start  md:gap-x-3 justify-center items-center gap-y-5  mt-10  px-2 '>
-
             {/* sidebar */}
             <div className=' font-DanaDemiBold mb-10 flex justify-around mx-auto items-center  w-full  h-fit px-2 py-2 rounded-lg  shadow-dark text-sm'>
                 <div className='hidden  sm:flex items-center gap-x-1'>
