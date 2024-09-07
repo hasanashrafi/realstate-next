@@ -1,10 +1,11 @@
 "use client"
-import Link from 'next/link'
+import toast, { Toaster } from 'react-hot-toast'
 import React, { useState } from 'react'
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { signIn } from "next-auth/react"
-import { ThreeDots } from "react-loader-spinner"
-import toast, { Toaster } from 'react-hot-toast'
+
+import Dots from '../module/ThreeDots'
 
 
 function SigninPage() {
@@ -17,7 +18,7 @@ function SigninPage() {
   const signinHandler = async (e) => {
     e.preventDefault()
     setLoading(true)
-    
+
     const res = await signIn("credentials", {
       email,
       password,
@@ -36,10 +37,10 @@ function SigninPage() {
 
   return (
     <div className="flex max-w-3xl lg:max-w-[1300px]  mx-auto min-h-screen p-10 font-DanaDemiBold">
-          <Toaster
-            position="top-center"
-            reverseOrder={false}
-          />
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+      />
       <div className="hidden shadow-dark lg:flex items-center justify-center flex-1 bg-white text-black">
         <div className="max-w-md text-center">
           <svg xmlns="http://www.w3.org/2000/svg" width="524.67004" height="531.39694" className="w-full" alt="https://undraw.co/illustrations" title="https://undraw.co/illustrations" viewBox="0 0 524.67004 531.39694" xmlnsXlink="http://www.w3.org/1999/xlink">
@@ -172,18 +173,7 @@ function SigninPage() {
             </div>
             {
               loading ? (
-                <div className="block w-fit max-w-xs mx-auto  px-3 py-3 "  >
-                  <ThreeDots
-                    visible={true}
-                    height="80"
-                    width="80"
-                    color="#403ffe"
-                    radius="9"
-                    ariaLabel="three-dots-loading"
-                    wrapperStyle={{}}
-                    wrapperClass=""
-                  />
-                </div>
+                <Dots />
               ) : (
                 <div>
                   <button
