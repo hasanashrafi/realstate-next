@@ -10,8 +10,6 @@ import { IoMenu } from "react-icons/io5";
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const { data } = useSession()
-    console.log(data)
-
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
