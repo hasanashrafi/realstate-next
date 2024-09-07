@@ -1,5 +1,5 @@
-import { p2e } from '@/utils/replaceNumbers'
 import React from 'react'
+import { p2e } from '@/utils/replaceNumbers'
 
 function TextInput({
     title,
@@ -28,7 +28,6 @@ function TextInput({
                             placeholder='...'
                             className='w-72 h-36 p-2 my-1 text-justify rounded-md border focus:border-blue-600 outline-none'
                         />
-
                     ) : (
                         <input
                             onChange={changeHandler}
