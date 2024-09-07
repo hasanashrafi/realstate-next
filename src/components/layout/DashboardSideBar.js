@@ -1,13 +1,13 @@
 import Link from 'next/link'
-import { authOptions } from '@/app/api/auth/[...nextauth]/route'
 import { getServerSession } from 'next-auth'
 import { CgProfile } from "react-icons/cg"
+
+import { authOptions } from '@/app/api/auth/[...nextauth]/route'
 import LogOutButton from '../module/LogOutButton'
 
 
 async function DashboardSideBar({ children }) {
     const session = await getServerSession(authOptions)
-    console.log(session)
 
     return (
         <div className='w-[95%]  p-2 mx-auto flex flex-col md:flex-row md:items-start md:gap-x-3 justify-center items-center gap-y-5  mt-10  px-2 '>
