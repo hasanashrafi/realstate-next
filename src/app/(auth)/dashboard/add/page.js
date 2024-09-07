@@ -1,5 +1,5 @@
-import AddProfilePage from '@/components/template/AddProfilePage'
 import React from 'react'
+import AddProfilePage from '@/components/template/AddProfilePage'
 
 function AddProfile() {
   return <AddProfilePage/>
