@@ -8,7 +8,7 @@ const sp = (number) => {
     .toString()
     .match(/(\d+?)(?=(\d{3})+(?!\d)|$)/g);
   const joinedNumber = seperatedNumber.join(",");
-  return e2p(joinedNumber);
+  return p2e(joinedNumber);
 };
 
 export { e2p, p2e, sp };
