@@ -1,9 +1,10 @@
 "use client"
-import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import React, { useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast'
-import { ThreeDots } from "react-loader-spinner"
+import Link from 'next/link'
+
+import Dots from '../module/ThreeDots'
 
 function SignupPage() {
     const [name, setName] = useState("")
@@ -45,7 +46,6 @@ function SignupPage() {
                 reverseOrder: false
             })
         }
-        console.log(data)
     }
 
     return (
@@ -320,16 +320,7 @@ function SignupPage() {
                                         loading ?
                                             (
                                                 <div className="block w-fit max-w-xs mx-auto  px-3 py-3 "  >
-                                                    <ThreeDots
-                                                        visible={true}
-                                                        height="80"
-                                                        width="80"
-                                                        color="#403ffe"
-                                                        radius="9"
-                                                        ariaLabel="three-dots-loading"
-                                                        wrapperStyle={{}}
-                                                        wrapperClass=""
-                                                    />
+                                                   <Dots/>
                                                 </div>
                                             ) : (
                                                 <button
