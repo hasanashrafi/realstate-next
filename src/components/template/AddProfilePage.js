@@ -1,8 +1,12 @@
 "use client"
 import React, { useState } from 'react'
+import toast, { Toaster } from 'react-hot-toast'
+
 import TextInput from '../module/TextInput'
 import RadioList from '../module/RadioList'
 import TextList from '../module/TextList'
+import CustomDatePicker from '../module/CustomDatePicker'
+import Dots from '../module/ThreeDots'
 
 function AddProfilePage() {
     const [profileData, setProfileData] = useState({
@@ -17,13 +21,31 @@ function AddProfilePage() {
         rules: [],
         amenities: [],
     })
+    const [loading, setLoading] = useState(false)
 
     const submitHandler = async () => {
-        console.log(profileData)
+        setLoading(true)
+        const res = await fetch("/api/profile", {
+            method: "POST",
+            body: JSON.stringify(profileData),
+            headers: { "Content-Type": "application/json" }
+        })
+        const data = await res.json()
+        setLoading(false)
+
+        if (data.error) {
+            toast.error(data.error)
+        } else {
+            toast.success("آگهی با موفقیت ثبت شد")
+        }
     }
-    console.log(profileData)
+
     return (
         <div className='font-DanaMedium min-h-screen p-2  border rounded-md mb-10  w-full'>
+            <Toaster
+                position="top-center"
+                reverseOrder={false}
+            />
             <p className='mt-3 font-DanaDemiBold text-violet-700 text-xl mb-5  px-3'>ثبت آگهی</p>
             <div className='w-full pr-2 my-5 flex flex-col gap-y-6'>
                 <TextInput
@@ -77,11 +99,20 @@ function AddProfilePage() {
                     setProfileData={setProfileData}
                     type="rules"
                 />
-                <button
-                    onClick={submitHandler}
-                    className=' bg-blue-600 hover:bg-blue-800 text-white md:w-[50%] mx-auto w-[95%]  p-2 rounded-md mt-5'>
-                    ثبت آگهی
-                </button>
+                <CustomDatePicker profileData={profileData} setProfileData={setProfileData} />
+
+                {
+                    loading ? (
+                       <Dots/>
+                    ) : (
+                        <button
+                            onClick={submitHandler}
+                            className=' bg-blue-600 hover:bg-blue-800 text-white md:w-[50%] mx-auto w-[95%]  p-2 rounded-md mt-5'>
+                            ثبت آگهی
+                        </button>
+                    )
+                }
+
             </div>
         </div>
     )
