@@ -4,7 +4,7 @@ dotenv.config();
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col mx-auto w-full p-4">
+    <main className=" flex min-h-screen flex-col mx-auto w-full p-4">
       <div className="max-w-5xl rounded-md mx-auto h-screen w-full  font-mono text-sm ">
        
        <div className="flex font-Dana flex-wrap w-[90%] mx-auto gap-x-4 justify-center  items-center p-2   ">
