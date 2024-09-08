@@ -8,12 +8,15 @@ function MyProfilePage({ profiles }) {
     }
 
     return (
-        <div className=' flex flex-wrap gap-2 w-full justify-center p-4 font-Dana min-h-screen'>
+        <div className=' p-4 grid  xl:grid-cols-2 md:grid-cols-1 gap-3 w-full justify-center  font-Dana '>
             {profiles.length === 0 ? (
                 <p className='p-2 font-DanaMedium text-center text-red-600 bg-red-200 rounded-md'> آگهی ثبت نشده است.</p>
             ) : (
                 profiles.map((profile) => (
-                    <DashboardCard key={profile._id} data={profile} />
+                    <DashboardCard 
+                    key={profile._id} 
+                    data={JSON.parse(JSON.stringify(profile))}      
+                    />
                 ))
             )}
         </div>
