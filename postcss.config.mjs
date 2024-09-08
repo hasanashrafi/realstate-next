@@ -3,6 +3,9 @@ const config = {
   plugins: {
     tailwindcss: {},
   },
+  'postcss-reporter': {
+      clearReportedMessages: true,
+    },
 };
 
 export default config;
