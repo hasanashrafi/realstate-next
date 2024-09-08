@@ -21,9 +21,13 @@ async function MyProfiles() {
             }
         }
     ])
-   
 
-    return <MyProfilePage profiles={user.profiles}  />
+
+    return (
+        <div className='w-full min-h-screen '>
+            <MyProfilePage profiles={user.profiles} />
+        </div>
+    )
 }
 
 export default MyProfiles
