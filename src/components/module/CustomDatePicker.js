@@ -11,7 +11,7 @@ function CustomDatePicker({ profileData, setProfileData }) {
     }
     return (
         <div>
-            <p>تاریخ ساخت</p>
+            <p className='text-white'>تاریخ ساخت</p>
             <div className='my-3'>
                 <DatePicker
                     className=''
