@@ -15,8 +15,8 @@ function TextInput({
     }
 
     return (
-        <div className='p-2'>
-            <p>{title}</p>
+        <div className='p-2 '>
+            <p className='text-white'>{title}</p>
             {
                 textarea ?
                     (
