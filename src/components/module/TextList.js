@@ -24,7 +24,7 @@ function TextList({ title, profileData, setProfileData, type }) {
     }
     return (
         <div className=''>
-            <p>{title}</p>
+            <p className='text-white'>{title}</p>
             {
                 profileData[type].map((i, index) => (
                     <div key={index} className='flex items-center'>
