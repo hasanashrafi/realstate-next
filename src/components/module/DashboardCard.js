@@ -2,17 +2,32 @@
 
 import React from 'react'
 import Card from './Card'
+import { useRouter } from 'next/navigation'
+import toast, { Toaster } from 'react-hot-toast'
 
 function DashboardCard({ data }) {
+    const router = useRouter()
+
     const editHandler = () => {
-
+        router.push(`/dashboard/my-profiles/${data?._id}`)
     }
-    const deleteHandler = () => {
 
+    const deleteHandler = async () => {
+        const res = await fetch(`/api/profile/delete/${data._id}`, {
+            method: "DELETE",
+        })
+        const result = await res.json();
+        if (result.error) {
+            toast.error(result.error)
+        } else {
+            toast.success("آگهی با موفقیت حذف شد.")
+            router.refresh()
+        }
     }
 
     return (
         <div className='bg-blue-100 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20 flex flex-col sm:flex-row  w-full  justify-center py-4  items-center rounded-l-xl'>
+            <Toaster />
             <Card data={data} />
             <div className='flex w-[50%] sm:w-[95%] mx-auto self-end justify-between '>
                 <button
