@@ -23,7 +23,7 @@ function BuyResidentialPage({ data }) {
                 {
                     data.map((profile) => (
                         <div key={profile._id}
-                            className='w-full  sm:w-1/2  lg:w-1/4'
+                            className='w-full  sm:w-1/2  lg:w-1/5'
                         >
                             <Card data={profile} />
                         </div>
