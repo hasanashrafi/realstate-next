@@ -19,6 +19,11 @@ function SideBar() {
                 className='m-1 text-lg'
                 href={{ pathname: "/buy-residential", query: { category: "villa" } }}>
                 ویلا
+            </Link> 
+             <Link
+                className='m-1 text-lg'
+                href={{ pathname: "/buy-residential", query: { category: "apartment" } }}>
+                آپارتمان
             </Link>
             <Link
                 className='m-1 text-lg'
