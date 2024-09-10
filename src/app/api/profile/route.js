@@ -6,6 +6,34 @@ import Profile from "@/models/Profile";
 import User from "@/models/User";
 import connectDB from "@/utils/connectDB"
 
+export async function GET(req) {
+    try {
+        await connectDB()
+
+        const profiles = await Profile.find().select("-userId")
+        console.log(profiles)
+
+
+
+
+
+        return NextResponse.json(
+            {
+                status: 200,
+                message: "اطلاعات دریافت شد",
+                data:profiles,
+            })
+
+    } catch (error) {
+        console.log(error)
+        return NextResponse.json(
+            { status: 500 },
+            { error: "مشکلی در ارتباط با سرور رخ داده است." }
+        )
+    }
+}
+
+
 export async function POST(req) {
 
     try {
@@ -166,4 +194,3 @@ export async function PATCH(req) {
         )
     }
 }
-
