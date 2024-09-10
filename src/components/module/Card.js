@@ -23,7 +23,7 @@ function Card({ data: { title, category, location, price } }) {
     };
 
     return (
-        <div className='flex flex-col gap-y-3 w-full sm:w-[70%] p-2 bg-blue-800 text-white  rounded-l-xl'>
+        <div className='flex flex-col gap-y-3 w-full   p-2 bg-blue-800 text-white  rounded-l-xl'>
             <p className='flex items-center justify-center text-3xl'>
                 {icons[category] || <span>No Icon</span>}
             </p>
