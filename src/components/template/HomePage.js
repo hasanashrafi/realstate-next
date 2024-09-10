@@ -3,6 +3,8 @@ import React from 'react'
 import { CiCircleCheck } from "react-icons/ci";
 import { FaHouseCircleCheck } from "react-icons/fa6";
 import CategoryCard from '../module/CategoryCard';
+import { CiLocationOn } from "react-icons/ci";
+
 
 function HomePage() {
     const services = [
@@ -19,21 +21,23 @@ function HomePage() {
         "کرج",
         "مشهد",
         "رشت",
-        "بابلسر"
+        "بابلسر",
+        "مرند",
+
     ]
 
     return (
-        <div className='font-Dana max-w-5xl my-10 w-[95%] mx-auto min-h-screen  rounded-md  p-4'>
+        <div className='font-Dana max-w-5xl my-10 w-full mx-auto min-h-screen  rounded-md  p-4'>
 
             <div className='p-2 '>
-                <p className='text-4xl text-center my-5 font-DanaDemiBold text-white'>
+                <p className=' drop-shadow-glow text-3xl text-center my-5 font-DanaDemiBold text-white'>
                     سامانه خرید و اجاره ملک
                 </p>
-                <p className='text-center text-sky-300 text-xl'>شرکت آلفا ملک</p>
-                <ul className='flex my-4 gap-x-7 mx-auto justify-around text-white  p-2'>
+                <p className='text-center text-sky-300  md:text-xl'>شرکت آلفا ملک</p>
+                <ul className='flex my-4  mx-auto justify-around text-white  p-2'>
                     {services.map((i) => (
                         <li key={i}
-                            className='flex items-center justify-center w-20 hover:w-24  p-2 border-b-2 border-b-white cursor-pointer transition-all ease-in-out hover:border-b-gray-300 '
+                            className='flex flex-wrap items-center justify-center mr-1 w-20 hover:w-24  p-2 border-b-2 border-b-white cursor-pointer transition-all ease-in-out hover:border-b-gray-300 '
                         >
                             <span> <FaHouseCircleCheck className='text-xl  ' /></span>
                             <span className='block  mx-2'> {i} </span>
@@ -43,7 +47,7 @@ function HomePage() {
                 </ul>
             </div>
             {/* image */}
-            <div className='w-full flex flex-wrap my-4 mx-auto justify-center gap-2'>
+            <div className=' w-full flex flex-wrap my-4 mx-auto justify-center gap-2'>
                 <div className='relative'>
                     <Image
                         priority
@@ -131,9 +135,30 @@ function HomePage() {
 
 
             </div>
+           
             {/* category */}
-            <div className=''>
+            <div className='flex items-center gap-x-3 my-10'>
                 <CategoryCard title="ویلا " name="villa" />
+                <CategoryCard title="دفتر " name="office" />
+                <CategoryCard title="مغازه " name="store" />
+                <CategoryCard title="آپارتمان " name="apartment" />
+            </div>
+          
+            {/* cities */}
+            <div className='my-10'>
+                <p className='mx-auto font-DanaDemiBold text-2xl border-b-2 border-b-white w-fit text-white'>شهرهای پر بازدید</p>
+             <ul className= 'w-full  flex flex-wrap justify-center gap-y-3 my-10  text-white'>
+                {
+                    cities.map((city) => (
+                        <li key={city}
+                        className='flex items-center justify-center  font-DanaMedium bg-white text-indigo-600 w-24 m-1 text-center rounded-xl cursor-pointer  p-1 hover:bg-indigo-600 hover:text-white transition-all ease-in-out'
+                        >
+                           <CiLocationOn />
+                            <span>{city}</span>
+                        </li>
+                    ))
+                }
+             </ul>
             </div>
 
         </div>
