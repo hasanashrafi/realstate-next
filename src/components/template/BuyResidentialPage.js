@@ -1,18 +1,19 @@
 import React from 'react'
 import Card from '../module/Card'
+import SideBar from '../module/SideBar'
 
 function BuyResidentialPage({ data }) {
- 
+
 
     return (
-        <div className='font-Dana p-4'>
+        <div className='flex font-Dana p-4'>
             {/*sideBar  */}
             <div>
-
+                <SideBar />
             </div>
 
             {/* residential */}
-            <div className='flex flex-wrap justify-center gap-5'>
+            <div className='flex flex-wrap justify-center w-full  p-2 gap-5 '>
                 {
                     data.length ? null : (
                         <p className='text-center bg-red-200 text-red-600 rounded-md p-2'>
@@ -21,11 +22,11 @@ function BuyResidentialPage({ data }) {
                 }
                 {
                     data.map((profile) => (
-                       <div key={profile._id}
-                       className='w-full sm:w-1/3 md:w-1/3 lg:w-1/6'
-                       >
-                        <Card  data={profile} />
-                       </div>
+                        <div key={profile._id}
+                            className='w-full  sm:w-1/2  lg:w-1/4'
+                        >
+                            <Card data={profile} />
+                        </div>
                     ))
                 }
             </div>
