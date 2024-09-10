@@ -10,16 +10,17 @@ async function BuyResidential({ searchParams }) {
 
 
     if (data.error) return <p>مشکلی پیش آمده است</p>
-  
-    if (searchParams.category) {
 
-        
+    let finalData = data.data
+    if (searchParams.category) {
+        finalData = finalData.filter((i) => i.category === searchParams.category)
+
     }
-        
-        
-        return (
+
+
+    return (
         <div className='min-h-screen p-5'>
-            <BuyResidentialPage data={data.data} />
+            <BuyResidentialPage data={finalData} />
         </div>
     )
 }
