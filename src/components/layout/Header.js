@@ -36,6 +36,9 @@ function Header() {
                             <li className='p-1'>
                                 <Link href="/buy-residential">آگهی ها</Link>
                             </li>
+                            <li className='p-1'>
+                            <Link href="dashboard/add">ثبت آگهی</Link>
+                        </li>
                         </ul>
                     )}
                 </div>
@@ -48,6 +51,7 @@ function Header() {
                         <li className='p-1'>
                             <Link href="/buy-residential">آگهی ها</Link>
                         </li>
+                       
                     </ul>
                 </div>
 
