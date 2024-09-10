@@ -3,6 +3,12 @@ import React from 'react'
 import { FaFilter } from "react-icons/fa";
 
 function SideBar() {
+    const queries = [
+        { villa: "ویلا" },
+        { apartment: "آپارتمان" },
+        { store: "مغازه" },
+        { office: "دفتر" },
+    ]
     return (
         <div className='flex flex-col w-36 p-3 text-white rounded h-auto'>
 
@@ -15,27 +21,18 @@ function SideBar() {
                 href="/buy-residential">
                 همه
             </Link>
-            <Link
-                className='m-1 text-lg'
-                href={{ pathname: "/buy-residential", query: { category: "villa" } }}>
-                ویلا
-            </Link> 
-             <Link
-                className='m-1 text-lg'
-                href={{ pathname: "/buy-residential", query: { category: "apartment" } }}>
-                آپارتمان
-            </Link>
-            <Link
-                className='m-1 text-lg'
-                href={{ pathname: "/buy-residential", query: { category: "store" } }}
-                >
-                مغازه
-            </Link>
-            <Link
-                className='m-1 text-lg'
-                href={{ pathname: "/buy-residential", query: { category: "office" } }}>
-                دفتر
-            </Link>
+            {
+                queries.map(query => (
+                    <Link
+                        className='m-1 text-lg'
+                        href={{
+                            pathname: "/buy-residential",
+                            query: { category: Object.keys(query) }
+                        }} >
+                        {Object.values(query)}
+                    </Link>
+                ))
+            }
 
         </div>
     )
