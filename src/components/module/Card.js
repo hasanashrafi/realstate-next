@@ -14,7 +14,7 @@ import { sp } from '@/utils/replaceNumbers';
 import Link from 'next/link';
 
 
-function Card({ data: { title, category, location, price } }) {
+function Card({ data: { _id,title, category, location, price } }) {
     const icons = {
         villa: <GiVillage />,
         apartment: <MdApartment />,
@@ -39,7 +39,7 @@ function Card({ data: { title, category, location, price } }) {
                 <FaHandHoldingUsd className='text-xl' />
                 {sp(price)} تومان
             </p>
-            <Link href='/profile-details' className='w-full p-2 rounded bg-blue-100 text-blue-800 transition-all ease-in-out hover:bg-blue-200 border text-sm flex items-center justify-between'>
+            <Link href={`/buy-residential/${_id}`} className='w-full p-2 rounded bg-blue-100 text-blue-800 transition-all ease-in-out hover:bg-blue-200 border text-sm flex items-center justify-between'>
                 مشاهده آگهی
                 <FaArrowLeftLong />
             </Link>
