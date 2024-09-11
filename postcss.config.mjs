@@ -4,9 +4,7 @@ const config = {
     tailwindcss: {},
     autoprefixer: {},
   },
-  'postcss-reporter': {
-      clearReportedMessages: true,
-    },
+  
 };
 
 export default config;
