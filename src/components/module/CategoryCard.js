@@ -5,7 +5,7 @@ import React from 'react'
 function CategoryCard({ title, name }) {
     return (
         <div className='w-full rounded-md hover:scale-105 transition-all ease-in-out'>
-            <Link href="/">
+            <Link href={`/buy-residential/?category=${name}`}>
                 <Image
                     src={`/images/${name}.png`}
                     alt={title}
