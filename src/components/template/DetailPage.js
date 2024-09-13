@@ -80,8 +80,8 @@ function DetailPage({ data: {
                         {icons[category]}
                        <span className="text-2xl"> {categories[category]}</span>
                     </p>
-                    <p className="flex  gap-x-2 ">
-                    <FaHandHoldingUsd className="size-4 "/>
+                    <p className="flex items-center gap-x-2 ">
+                    <FaHandHoldingUsd className="size-6 "/>
                     {sp(price)}
                     </p>
                 </div>
