@@ -123,7 +123,7 @@ function HomePage() {
             {/* category */}
             <div className='flex items-center gap-x-3 my-10'>
                 {Object.keys(categories).map((i) => (
-                    <CategoryCard title={categories[i]} name={i} />
+                    <CategoryCard key={i} title={categories[i]} name={i} />
                 ))}
             </div>
 
