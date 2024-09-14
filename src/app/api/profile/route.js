@@ -6,16 +6,12 @@ import Profile from "@/models/Profile";
 import User from "@/models/User";
 import connectDB from "@/utils/connectDB"
 
-export async function GET(req) {
+export async function GET() {
     try {
         await connectDB()
 
-        const profiles = await Profile.find().select("-userId")
+        const profiles = await Profile.find({published:true}).select("-userId")
         console.log(profiles)
-
-
-
-
 
         return NextResponse.json(
             {
@@ -32,7 +28,6 @@ export async function GET(req) {
         )
     }
 }
-
 
 export async function POST(req) {
 
