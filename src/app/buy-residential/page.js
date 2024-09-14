@@ -4,7 +4,7 @@ import React from 'react'
 async function BuyResidential({ searchParams }) {
 const uri ="https://realestate-next-chi.vercel.app/api/profile" 
   const localUri = "http://localhost:3000/api/profile"
-const res = await fetch(uri,
+const res = await fetch(localUri,
         { cache: "no-store" }
     )
     const data = await res.json()
