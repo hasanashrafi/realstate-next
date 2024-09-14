@@ -4,27 +4,11 @@ import { CiCircleCheck } from "react-icons/ci";
 import { FaHouseCircleCheck } from "react-icons/fa6";
 import CategoryCard from '../module/CategoryCard';
 import { CiLocationOn } from "react-icons/ci";
+import { categories, cities, services } from '@/constants/strings';
 
 
 function HomePage() {
-    const services = [
-        "خرید",
-        "رهن",
-        "اجاره",
-        "فروش",
-    ]
-    const cities = [
-        "تهران",
-        "تبریز",
-        "شیراز",
-        "اصفهان",
-        "کرج",
-        "مشهد",
-        "رشت",
-        "بابلسر",
-        "مرند",
 
-    ]
 
     return (
         <div className='font-Dana max-w-5xl my-10 w-full mx-auto min-h-screen  rounded-md  p-4'>
@@ -135,30 +119,29 @@ function HomePage() {
 
 
             </div>
-           
+
             {/* category */}
             <div className='flex items-center gap-x-3 my-10'>
-                <CategoryCard title="ویلا " name="villa" />
-                <CategoryCard title="دفتر " name="office" />
-                <CategoryCard title="مغازه " name="store" />
-                <CategoryCard title="آپارتمان " name="apartment" />
+                {Object.keys(categories).map((i) => (
+                    <CategoryCard title={categories[i]} name={i} />
+                ))}
             </div>
-          
+
             {/* cities */}
             <div className='my-10'>
                 <p className='mx-auto font-DanaDemiBold text-2xl border-b-2 border-b-white w-fit text-white'>شهرهای پر بازدید</p>
-             <ul className= 'w-full  flex flex-wrap justify-center gap-y-3 my-10  text-white'>
-                {
-                    cities.map((city) => (
-                        <li key={city}
-                        className='flex items-center justify-center  font-DanaMedium bg-white text-indigo-600 w-24 m-1 text-center rounded-xl cursor-pointer  p-1 hover:bg-indigo-600 hover:text-white transition-all ease-in-out'
-                        >
-                           <CiLocationOn />
-                            <span>{city}</span>
-                        </li>
-                    ))
-                }
-             </ul>
+                <ul className='w-full  flex flex-wrap justify-center gap-y-3 my-10  text-white'>
+                    {
+                        cities.map((city) => (
+                            <li key={city}
+                                className='flex items-center justify-center  font-DanaMedium bg-white text-indigo-600 w-24 m-1 text-center rounded-xl cursor-pointer  p-1 hover:bg-indigo-600 hover:text-white transition-all ease-in-out'
+                            >
+                                <CiLocationOn />
+                                <span>{city}</span>
+                            </li>
+                        ))
+                    }
+                </ul>
             </div>
 
         </div>
