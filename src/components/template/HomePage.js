@@ -13,19 +13,18 @@ function HomePage() {
     return (
         <div className='font-Dana max-w-5xl my-10 w-full mx-auto min-h-screen  rounded-md  p-4'>
 
-            <div className='p-2 '>
+            <div className='p-2 my-5 '>
                 <p className=' drop-shadow-glow text-3xl text-center my-5 font-DanaDemiBold text-white'>
-                    سامانه خرید و اجاره ملک
+                     سامانه خرید و اجاره ملک گونش
                 </p>
-                <p className='text-center text-sky-300  md:text-xl'>شرکت آلفا ملک</p>
-                <ul className='flex my-4  mx-auto justify-around text-white  p-2'>
+                <p className='text-center text-sky-300  md:text-xl'>شرکت تجاری گونش </p>
+                <ul className='flex  my-5 gap-x-4 mx-auto justify-center text-white  p-2'>
                     {services.map((i) => (
-                        <li key={i}
-                            className='flex flex-wrap items-center justify-center mr-1 w-20 hover:w-24  p-2 border-b-2 border-b-white cursor-pointer transition-all ease-in-out hover:border-b-gray-300 '
-                        >
-                            <span> <FaHouseCircleCheck className='text-xl  ' /></span>
-                            <span className='block  mx-2'> {i} </span>
-
+                        <li key={i} className='p-2'>
+                            <span className=' flex  items-center'>
+                                <FaHouseCircleCheck className='text-xl ml-2 ' />
+                                {i}
+                            </span>
                         </li>
                     ))}
                 </ul>
