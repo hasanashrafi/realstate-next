@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fa" dir="rtl">
-      <body className="bg-[url('/images/bg-4.jpg')] bg-cover backdrop-blur-md">
+      <body className="bg-[url('/images/bg-7.jpg')] bg-cover backdrop-blur-md">
         <NexAuthProvider>
           <Layout>
             {children}
