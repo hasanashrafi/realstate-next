@@ -3,24 +3,16 @@ import React from 'react'
 import { MdOutlineRealEstateAgent } from "react-icons/md";
 import { FaMapLocationDot } from "react-icons/fa6";
 import { FaHandHoldingUsd } from "react-icons/fa";
-import { GiVillage } from "react-icons/gi";
-import { MdApartment } from "react-icons/md";
-import { RiHomeOfficeFill } from "react-icons/ri";
-import { FaStoreAlt } from "react-icons/fa";
 import { FaArrowLeftLong } from "react-icons/fa6";
 
 
 import { sp } from '@/utils/replaceNumbers';
 import Link from 'next/link';
+import {icons} from '@/constants/icons';
 
 
 function Card({ data: { _id,title, category, location, price } }) {
-    const icons = {
-        villa: <GiVillage />,
-        apartment: <MdApartment />,
-        office: <RiHomeOfficeFill />,
-        store: <FaStoreAlt />
-    };
+    
 
     return (
         <div className='flex flex-col gap-y-3 w-full   p-2 bg-blue-800 text-white  rounded-l-xl'>
