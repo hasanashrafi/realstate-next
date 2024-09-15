@@ -9,21 +9,26 @@ import DashboardSideBar from '@/components/layout/DashboardSideBar'
 import AdminPage from '@/components/template/AdminPage'
 import Profile from '@/models/Profile'
 
+export const metadata = {
+    title:"پنل ادمین",
+}
 async function Admin() {
+
     await connectDB()
+
     const session = await getServerSession(authOptions)
+   
     if (!session) redirect("/signin")
 
     const user = await User.findOne({ email: session.user.email })
+
     if (user.role !== "ADMIN") redirect("/dashboard")
 
-    const profile = await Profile.findOne({ published: false })
+    const profiles = await Profile.find({ published: false })
 
     return (
         <DashboardSideBar email={user.email} role={user.role}>
-            <div className='min-h-screen'>
-                <AdminPage profile={profile} />
-            </div>
+                <AdminPage profiles={JSON.parse(JSON.stringify(profiles))} />
         </DashboardSideBar>
     )
 }
