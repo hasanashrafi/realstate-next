@@ -8,8 +8,9 @@ import "./globals.css";
 
 
 export const metadata = {
-  title: "Alpha RealEstate",
-  description: "سایت املاک الفا",
+  title: " گونش ملک",
+  description: "سایت املاک گونش",
+  icons: { icon: "./favicon.ico" },
 };
 
 export default function RootLayout({ children }) {
