@@ -40,8 +40,10 @@ export async function PATCH(req, context) {
 
 
         return NextResponse.json(
-            { status: 201 },
-            { message: "آگهی با موفقیت منتشر شد." }
+            {
+                status: 201,
+                message: "آگهی با موفقیت منتشر شد."
+            }
         )
 
     } catch (error) {
