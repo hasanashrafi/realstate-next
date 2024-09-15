@@ -38,7 +38,7 @@ async function DashboardSideBar({ children, email, role }) {
                     role === "ADMIN" ? (
                         <Link
                             className='text-blue-300  hover:text-blue-500 transition-all ease-in-out'
-                            href="/">
+                            href="/admin">
                             در انتظار تایید
                         </Link>
                     ) : null
